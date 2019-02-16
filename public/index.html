@@ -16,14 +16,15 @@
         /* Set default font-family */
 
         #editor {
-                font-family: "Aref Ruqaa";
-                font-size: 18px;
-                height: calc(100vh - 200px);
-                background: linear-gradient(135deg ,#FFFFFF, #DDDDDD);
+            font-family: "Aref Ruqaa";
+            font-size: 18px;
+            height: calc(100vh - 200px);
+            background: linear-gradient(135deg, #FFFFFF, #DDDDDD);
         }
-        #toolbar{
-                
-            background: linear-gradient(135deg ,#FFFFFF, #DDDDDD);
+
+        #toolbar {
+
+            background: linear-gradient(135deg, #FFFFFF, #DDDDDD);
         }
 
         /* Set dropdown font-families */
@@ -53,7 +54,8 @@
         #overlay {
             position: fixed;
             /* Sit on top of the page content */
-            display: block; /*block, none*/
+            display: block;
+            /*block, none*/
             width: 20%;
             height: 20%;
             top: calc(100vh - 300px);
@@ -132,6 +134,7 @@
         var BackgroundClass = Quill.import('attributors/class/background');
         var ColorClass = Quill.import('attributors/class/color');
         var SizeStyle = Quill.import('attributors/style/size');
+        var Delta = Quill.import('delta');
         Quill.register(Font, true);
         Quill.register(BackgroundClass, true);
         Quill.register(ColorClass, true);
@@ -146,6 +149,27 @@
             theme: 'snow'
         });
 
+        // Check for unsaved data
+        window.onbeforeunload = function () {
+            return 'There are unsaved changes. Are you sure you want to leave?';
+        }
+
+        //var mySound = new sound("bounce.mp3");
+        function sound(src) {
+            this.sound = document.createElement("audio");
+            this.sound.src = src;
+            this.sound.setAttribute("preload", "auto");
+            this.sound.setAttribute("controls", "none");
+            this.sound.style.display = "none";
+            document.body.appendChild(this.sound);
+            this.play = function () {
+                this.sound.play();
+            }
+            this.stop = function () {
+                this.sound.pause();
+            }
+        }
+        
     </script>
 
     <div id="overlay">
@@ -156,6 +180,6 @@
         (C) BEN N DOL enterprises 2019
     </footer>
 
-    </body>
+</body>
 
 </html>
