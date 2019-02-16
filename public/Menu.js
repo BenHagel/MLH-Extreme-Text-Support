@@ -1,7 +1,5 @@
 var Menu = {};
 
-Menu.sessionInfo = {};
-
 Menu.phrases = [];
 Menu.phraseIndex = 0;
 Menu.currentChar = 0;
@@ -35,7 +33,7 @@ Menu.tickPhrases = function(){
 
 //Ricardo Queries and timings
 Menu.init = function(){
-    Menu.sessionInfo.count = 0;
+    Ric.count = 0;
     Menu.phrases = Menu.homephrases;
 
     //setTimeout(Menu.)
@@ -45,24 +43,8 @@ Menu.init = function(){
 };
 
 Menu.ticker = function(){
-    Menu.sessionInfo.count++;
 
-    if(Menu.sessionInfo.count % 5 === 0){
-        var workingOn = editor.getText(0, 10);
-        console.log(workingOn);
-        Menu.sendRicardoUpdate();
-    }
+    Ric.update();
+
     setTimeout(Menu.ticker, 500);
-};
-
-Menu.entities = [];
-
-
-
-
-
-
-
-Menu.sendRicardoUpdate = function(){
-
 };
