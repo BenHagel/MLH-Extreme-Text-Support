@@ -7,6 +7,7 @@
     <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
     <script type="text/javascript" src="./Menu.js"></script>
+    <link rel="stylesheet" href="style/custom_rico.css">
 </head>
 
 <body onload="Menu.init()">
@@ -14,9 +15,14 @@
         /* Set default font-family */
 
         #editor {
-            font-family: "Aref Ruqaa";
-            font-size: 18px;
-            height: calc(100vh - 61px);
+                font-family: "Aref Ruqaa";
+                font-size: 18px;
+                height: calc(100vh - 200px);
+                background: linear-gradient(135deg ,#FFFFFF, #DDDDDD);
+        }
+        #toolbar{
+                
+            background: linear-gradient(135deg ,#FFFFFF, #DDDDDD);
         }
 
         /* Set dropdown font-families */
@@ -49,7 +55,7 @@
             display: block; /*block, none*/
             width: 20%;
             height: 20%;
-            top: calc(100vh - 250px);
+            top: calc(100vh - 300px);
             left: 50;
             right: 0;
             bottom: 0;
@@ -60,6 +66,13 @@
             /* Add a pointer on hover */
         }
     </style>
+
+    <header>
+        <img src="style/logo.png" width="80px" height="80px">
+        <div class="speech-bubble-area">
+            <span id="speechBubble"></span>
+        </div>
+    </header>
 
     <!-- Create the toolbar container -->
     <div id="toolbar">
@@ -137,6 +150,11 @@
     <div id="overlay">
         <img src="../database/res/Ricardo2.gif" width="300" height="auto">
     </div>
-</body>
+
+    <footer>
+        (C) BEN N DOL enterprises 2019
+    </footer>
+
+    </body>
 
 </html>

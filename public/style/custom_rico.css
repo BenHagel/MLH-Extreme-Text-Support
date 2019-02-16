@@ -1,0 +1,58 @@
+.rico{
+
+}
+
+body{
+    background: linear-gradient(135deg ,#260133, #1F2348);
+}
+
+header{
+    background: linear-gradient(135deg ,#260133, #1F2348);
+    height: calc(102px);
+}
+
+#speechBubble{
+
+}
+.speech-bubble-area{
+    color: white;
+    font-size: 32px;
+	/*border-style: solid;
+	border-color: green;*/
+	width: calc(100vw - 110px);
+	height: calc(90px);
+	position: absolute;
+	top: 5px;
+	left: 102px;
+
+	text-align: left;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	justify-content: center;
+	vertical-align: middle;
+}
+
+footer {
+    background: rgb(0,0,0);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+}
