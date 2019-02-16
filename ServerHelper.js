@@ -7,3 +7,7 @@ Ricardo.init = function(){
     console.log(Ricardo.knownWords.length + ' words found');
 };
 
+Ricardo.handleApi = function(req, res){
+    
+};
+

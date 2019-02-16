@@ -21,7 +21,7 @@ app.get('/', function(req, res){
 app.post('/api', function(req, res){
 	res.header('Access-Control-Allow-Origin', '*');//'http://www.nimiqgames.ca/');
 	res.header('Access-Control-Allow-Methods', 'POST');
-	handleApi(req, res, sessionID, ServerHelper.sessions[sessionID].domain);
+	Ricardo.handleApi(req, res);
 });
 
 //Catch all 
