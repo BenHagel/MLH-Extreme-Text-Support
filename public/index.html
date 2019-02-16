@@ -7,6 +7,7 @@
         <!-- Include the Quill library -->
         <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
         <script type="text/javascript" src="./Menu.js"></script>
+        <link rel="stylesheet" href="style/custom_rico.css">
     </head>
 
     <body onload="Menu.init()">
@@ -15,7 +16,12 @@
             #editor {
                 font-family: "Aref Ruqaa";
                 font-size: 18px;
-                height: calc(100vh - 61px);
+                height: calc(100vh - 200px);
+                background: linear-gradient(135deg ,#FFFFFF, #DDDDDD);
+            }
+            #toolbar{
+                
+                background: linear-gradient(135deg ,#FFFFFF, #DDDDDD);
             }
             /* Set dropdown font-families */
             #toolbar .ql-font span[data-label="Aref Ruqaa"]::before {
@@ -36,6 +42,10 @@
             }
         </style>
 
+
+        <header>
+            <img src="style/logo.png" width="80px" height="80px">
+        </header>
         <!-- Create the toolbar container -->
         <div id="toolbar">
             <button class="ql-bold">Bold</button>
@@ -84,6 +94,10 @@
             <div id="editor">
             </div>
         </div>
+
+        <footer>
+            (C) BEN N DOL enterprises 2019
+        </footer>
 
         <!-- Initialize Quill editor -->
         <script>

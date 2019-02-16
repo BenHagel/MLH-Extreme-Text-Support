@@ -11,7 +11,7 @@ Menu.init = function(){
 
 Menu.ticker = function(){
     Menu.sessionInfo.count++;
-
+    
     if(Menu.sessionInfo.count % 5 === 0){
         var workingOn = editor.getText(0, 10);
         console.log(workingOn);
