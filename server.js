@@ -5,6 +5,9 @@ var path = require('path');
 var request = require('request');
 const port = 80;
 
+//Add server helpers
+eval('' + fs.readFileSync('./ServerHelper.js'));
+Ricardo.init();
 
 //Specify static loading
 app.use(express.static(path.join(__dirname + '/public')));
@@ -21,7 +24,7 @@ app.post('/api', function(req, res){
 	handleApi(req, res, sessionID, ServerHelper.sessions[sessionID].domain);
 });
 
-
+//Catch all 
 app.get('*', function(req, res){
       res.sendFile(path.join(__dirname + '/public/index_not_found.html'));
 });
