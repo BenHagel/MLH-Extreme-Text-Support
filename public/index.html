@@ -15,7 +15,7 @@
             #editor {
                 font-family: "Aref Ruqaa";
                 font-size: 18px;
-                height: 375px;
+                height: calc(100vh - 61px);
             }
             /* Set dropdown font-families */
             #toolbar .ql-font span[data-label="Aref Ruqaa"]::before {
@@ -80,7 +80,9 @@
         </div>
 
         <!-- Create the editor container -->
-        <div id="editor">
+        <div id="scrolling-container">
+            <div id="editor">
+            </div>
         </div>
 
         <!-- Initialize Quill editor -->
@@ -101,6 +103,7 @@
                     toolbar: '#toolbar'
                 },
                 placeholder: 'Enter text here...',
+                scrollingContainer: '#scrolling-container',
                 theme: 'snow'
             });
             
