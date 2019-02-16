@@ -17,7 +17,7 @@
         #editor {
             font-family: "Aref Ruqaa";
             font-size: 18px;
-            height: 375px;
+            height: 89%;
         }
 
         /* Set dropdown font-families */
@@ -89,7 +89,9 @@
     </div>
 
     <!-- Create the editor container -->
-    <div id="editor">
+    <div id="scrolling-container">
+        <div id="editor">
+        </div>
     </div>
 
     <!-- Initialize Quill editor -->
@@ -110,6 +112,7 @@
                 toolbar: '#toolbar'
             },
             placeholder: 'Enter text here...',
+            scrollingContainer: '#scrolling-container',
             theme: 'snow'
         });
     </script>
