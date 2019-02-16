@@ -37,7 +37,7 @@ Menu.tickPhrases = function(){
 Menu.init = function(){
     Menu.sessionInfo.count = 0;
     Menu.phrases = Menu.homephrases;
-    
+
     Menu.ticker();
     Menu.tickPhrases();
 };
@@ -52,6 +52,9 @@ Menu.ticker = function(){
     }
     setTimeout(Menu.ticker, 500);
 };
+
+Menu.entities = [];
+
 
 
 
