@@ -8,6 +8,12 @@ Ricardo.init = function(){
 };
 
 Ricardo.handleApi = function(req, res){
-    
+    if(req.query.cmd === 'wallet_and_balance'){
+        var val = Number(req.query.mp);
+        
+    }
+    else{
+        
+    }
 };
 
