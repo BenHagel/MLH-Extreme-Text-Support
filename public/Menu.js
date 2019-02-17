@@ -53,6 +53,13 @@ Menu.hideOverlay = function(){
 	Ric.sleep = 4;
 };
 
+//Hide the intitial overlay and start Ricardo's awakeneing from his slumber
+Menu.hideSpeech = function(){
+	document.getElementById('ricardoDiv').classList.add('hidden');
+	Ric.sleep = 5 + Math.random() * 10;
+	Ric.sleeping = true;
+};
+
 Menu.ticker = function(){
 
     Ric.update();
