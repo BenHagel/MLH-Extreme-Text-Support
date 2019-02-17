@@ -29,7 +29,6 @@ Ric.createNewEntity = function(entityType, lifeForce){
         obj.container.setAttribute('id', 'ricardoDiv');
         var ricardoGif = document.createElement('img');
         ricardoGif.setAttribute('src', Ric.baseURL_res + 'Ricardo2.gif');
-        obj.ricardoGifContainer = ricardoGif;
         obj.container.appendChild(ricardoGif);
     }
     obj.container.classList.add("hidden");
@@ -50,8 +49,6 @@ Ric.update = function(){
             Ric.sleeping = false;
             SOUND.RicardoOne.play();
             document.getElementById('ricardoDiv').classList.remove('hidden');
-            //Ric.entities[0].ricardoGifContainer.setAttribute('src', Ric.baseURL_res + Menu.ricardoGifs[Math.floor(Math.random() * Menu.ricardoGifs.length)]);
-            //Ric.entities[0].container.appendChild(Ric.entities[0].ricardoGifContainer);
             document.getElementById('ricardoGifDance').setAttribute('src', Ric.baseURL_res + Menu.ricardoGifs[Math.floor(Math.random() * Menu.ricardoGifs.length)])
             document.getElementById('ricardoSpeechBubble').innerText = Menu.ricardoPhrases[Math.floor(Math.random() * Menu.ricardoPhrases.length)];
         }
