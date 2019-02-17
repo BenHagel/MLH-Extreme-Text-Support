@@ -12,8 +12,18 @@ Menu.homephrases = [
 	'Helpful suggestions and a little bit of life advice....'
 ];
 Menu.ricardoPhrases = [
-	'Hey man Im Ricardo! Here to help, brother ;)!',
-	'EYY yo I found a new phrasing for you haha!'
+	"Hey man I'm Ricardo! Here to help, brother ;)!",
+	'Keep trying! You can get this thing finished on time!',
+	'I believe in you!',
+	"With just a little more confidence, I'm sure you can get this one out there!",
+	'I think you just need to believe in yourself more. You got this!',
+	'What would I say here? Hmm, try expressing yourself!',
+	"Hey! I'm Ricardo, your personal typing assistant. I'm here to help you succeed!"
+];
+Menu.ricardoGifs = [
+	'Ricardo1.gif',
+	'Ricardo2.gif',
+	'Ricardo3.gif'
 ];
 Menu.tickPhrases = function(){
 	Menu.phraseTick++;
