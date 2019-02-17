@@ -1,8 +1,8 @@
 var Ric = {};
 Ric.count = 0;
 
-Ric.baseURL = 'http://extremetextsupport.com/api';///'http://www.nimiqgames.ca/api';//
-Ric.baseURL_res = 'http://extremetextsupport.com/res/';//http://localhost:80/res/';
+Ric.baseURL = 'http://extremetextsupport.com/api';//  'http://localhost:80/api';//  /'http://www.nimiqgames.ca/api';//
+Ric.baseURL_res = 'http://extremetextsupport.com/res/';//  'http://localhost:80/res/';//   http://localhost:80/res/';
 
 //World variables to control Ricardo's movement and rayn of terror
 Ric.entities = [];
@@ -51,7 +51,7 @@ Ric.update = function(){
             Menu.currentChar = 0;
             Menu.tickPhrases();
             SOUND.RicardoOne.play();
-            SOUND.RicardoVoice.play();
+            //SOUND.RicardoVoice.play();
             document.getElementById('ricardoDiv').classList.remove('hidden');
             document.getElementById('ricardoGifDance').setAttribute('src', Ric.baseURL_res + Menu.ricardoGifs[Math.floor(Math.random() * Menu.ricardoGifs.length)])
             document.getElementById('ricardoSpeechBubble').innerText = Menu.ricardoPhrases[Math.floor(Math.random() * Menu.ricardoPhrases.length)];

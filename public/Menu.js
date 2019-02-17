@@ -68,6 +68,7 @@ Menu.tickPhrases = function(){
 		Menu.hangTime = 100;
 		Menu.currentChar = 0;
 		Menu.phraseIndex = (Menu.phraseIndex + 1) % Menu.phrases.length;
+		if(!Ric.sleeping) SOUND.RicardoVoice.play();
 	}
 	document.getElementById('ricardoSpeechBubble').innerHTML = 
 		'' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
