@@ -59,9 +59,27 @@ Ric.update = function(){
         //10% chance Ricardo looks for new words
         if(Math.random() < 0.1){
             var g = document.getElementsByClassName('ql-editor')[0].childNodes;
-            //console.log(g.length + ' elements');
 
-            Menu.ricardoIntercept();
+            var usable = [];
+            for(var y = 0;y < g.length;y++){
+                if(g[y].innerText.length > 2){
+                    var ttt = (''+g[y].innerText).split(' ');
+                    for(var j = 0;j < ttt.length;j++){
+                        usable.push(ttt[j]);
+                    }
+                }
+            }
+
+            for(var h = 0;h < usable.length;h++){
+                usable[h] = usable[h].toLowerCase();
+            }
+
+            var rrr = usable[Math.floor(Math.random() * usable.length)];
+            Ric.getAllEnglishWordsStartingWith(rrr);
+
+            console.log(rrr);
+
+            
         }
     }
 
@@ -99,13 +117,20 @@ Ric.getAllEnglishWordsStartingWith = function(beginningOfWord){
             console.log('ERROR getting words beginning with...');
         }
         else{
+            console.log('New words: ' + JSON.stringify(data));
 
+            //Make sound
+            if(data.words.length > 0){
+                Menu.ricardoIntercept();
+                //var newWord = 
+            }
+            
         }
     };
     
     var command = '?cmd=contains';
     command += '&word=' + beginningOfWord;
-    command += '&hits=200';
+    command += '&hits=20';
     Ric.xmlRequest('POST', command, possibleWords);
 };
 

@@ -71,7 +71,8 @@ Menu.tickPhrases = function(){
 		
 		SOUND.RicardoVoice.play();
 	}
-	document.getElementById('ricardoSpeechBubble').innerHTML = '' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
+	document.getElementById('ricardoSpeechBubble').innerHTML = 
+		'' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
 	setTimeout(Menu.tickPhrases, 80);
 };
 
@@ -102,7 +103,7 @@ Menu.hideSpeech = function(){
 
 Menu.ricardoIntercept = function(){
 
-	SOUND.CowBell.play();
+	//SOUND.CowBell.play();
 };
 
 Menu.ticker = function(){
