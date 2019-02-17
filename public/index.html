@@ -37,7 +37,6 @@
         /* Set default font-family */
 
         #editor {
-            font-family: "Aref Ruqaa";
             font-size: 18px;
             height: calc(100vh - 200px);
             background: linear-gradient(135deg, #FFFFFF, #DDDDDD);
@@ -47,6 +46,7 @@
             background: linear-gradient(135deg, #FFFFFF, #DDDDDD);
         }
 
+<<<<<<< HEAD
         /* Set dropdown font-families */
 
         #toolbar .ql-font span[data-label="Aref Ruqaa"]::before {
@@ -72,6 +72,9 @@
         }
 
         .overlay-for-ricardo {
+=======
+        #overlay {
+>>>>>>> f566f381e406da9d38c7c90e4da2bb34383424a4
             position: fixed;
             /* Sit on top of the page content */
             display: block;
@@ -110,11 +113,6 @@
                 <option value="32px">Huge</option>
             </select>
         </span>
-        <select class="ql-font">
-            <option selected>Aref Ruqaa</option>
-            <option value="mirza">Mirza</option>
-            <option value="roboto">Roboto</option>
-        </select>
         <button class="ql-image">Image</button>
         <button class="ql-code-block">Code Block</button>
 
@@ -157,14 +155,10 @@
 
     <!-- Initialize Quill editor -->
     <script>
-        // Add fonts to whitelist
-        var Font = Quill.import('formats/font');
-        Font.whitelist = ['mirza', 'roboto'];
         var BackgroundClass = Quill.import('attributors/class/background');
         var ColorClass = Quill.import('attributors/class/color');
         var SizeStyle = Quill.import('attributors/style/size');
         var Delta = Quill.import('delta');
-        Quill.register(Font, true);
         Quill.register(BackgroundClass, true);
         Quill.register(ColorClass, true);
         Quill.register(SizeStyle, true);
