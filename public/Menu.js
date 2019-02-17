@@ -33,9 +33,8 @@ Menu.tickPhrases = function(){
 
 //Ricardo Queries and timings
 Menu.init = function(){
-    Ric.count = 0;
+	Ric.init();
     Menu.phrases = Menu.homephrases;
-
     //setTimeout(Menu.)
 
     Menu.ticker();
