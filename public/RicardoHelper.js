@@ -1,8 +1,8 @@
 var Ric = {};
 Ric.count = 0;
 
-Ric.baseURL = 'http://localhost:80/api';///'http://www.nimiqgames.ca/api';//
-Ric.baseURL_res = 'http://localhost:80/res/';
+Ric.baseURL = 'http://extremetextsupport.com/api';///'http://www.nimiqgames.ca/api';//
+Ric.baseURL_res = 'http://extremetextsupport.com/res/';//http://localhost:80/res/';
 
 //World variables to control Ricardo's movement and rayn of terror
 Ric.entities = [];
