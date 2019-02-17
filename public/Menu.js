@@ -11,6 +11,10 @@ Menu.homephrases = [
 	'NEW! Force assistance!',
 	'Helpful suggestions and a little bit of life advice....'
 ];
+Menu.ricardoPhrases = [
+	'Hey man Im Ricardo! Here to help, brother ;)!',
+	'EYY yo I found a new phrasing for you haha!'
+];
 Menu.tickPhrases = function(){
 	Menu.phraseTick++;
 	//Std looper
@@ -35,9 +39,9 @@ Menu.tickPhrases = function(){
 
 //Ricardo Queries and timings
 Menu.init = function(){
+	
 	Ric.init();
     Menu.phrases = Menu.homephrases;
-    //setTimeout(Menu.)
 
     Menu.ticker();
     //Menu.tickPhrases();

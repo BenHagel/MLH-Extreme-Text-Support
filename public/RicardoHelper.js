@@ -84,7 +84,6 @@ Ric.xmlRequest = function(type, req, to){
 	xhr.open(type, Ric.baseURL + req, true);
 	xhr.send(null);
 };
-
 //Get english words
 Ric.getAllEnglishWordsStartingWith = function(beginningOfWord){
 	var possibleWords = function(data){
@@ -96,8 +95,9 @@ Ric.getAllEnglishWordsStartingWith = function(beginningOfWord){
         }
     };
     
-    var command = '?word=' + beginningOfWord;
-    command += '&hits=50';
+    var command = '?cmd=contains';
+    command += '&word=' + beginningOfWord;
+    command += '&hits=200';
     Ric.xmlRequest('POST', command, possibleWords);
 };
 

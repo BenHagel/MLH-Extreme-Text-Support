@@ -3,7 +3,7 @@ var SOUND = {};
 function preload() {
     soundFormats('mp3', 'ogg');
     SOUND.RicardoOne = loadSound(Ric.baseURL_res + 'Ricardo1.mp3');
-    SOUND.RicardoOne.setVolume(0.2);
+    SOUND.RicardoOne.setVolume(0.3);
     console.log('done loading????');
 }
 

@@ -8,12 +8,18 @@ Ricardo.init = function(){
 };
 
 Ricardo.handleApi = function(req, res){
-    if(req.query.cmd === 'wallet_and_balance'){
-        var val = Number(req.query.mp);
-        
+    if(req.query.cmd === 'contains'){
+        var hits = Number(req.query.hits);
+        var word = '' + req.query.word;
+        var results = {};
+        results.words = [];
+        for(var i = 0;i < Ricardo.knownWords.length;i++){
+            //if(results.words.push()
+        }
+        //res.json()
     }
     else{
-        
+        //res.json
     }
 };
 
