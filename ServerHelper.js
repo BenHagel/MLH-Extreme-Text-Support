@@ -11,7 +11,7 @@ Ricardo.handleApi = function(req, res){
     if(req.query.cmd === 'contains'){
         var hits = Number(req.query.hits);
         var word = '' + req.query.word;
-        console.log(word);
+        //console.log(word);
         var results = {};
         results.words = [];
         for(var i = 0;i < Ricardo.knownWords.length;i++){
