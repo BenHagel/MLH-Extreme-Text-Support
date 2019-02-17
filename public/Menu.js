@@ -106,7 +106,7 @@ Menu.hideSpeech = function(){
 
 Menu.ricardoIntercept = function(){
 
-	SOUND.CowBell.play();
+	//SOUND.CowBell.play();
 };
 
 Menu.ticker = function(){

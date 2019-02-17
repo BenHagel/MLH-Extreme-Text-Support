@@ -55,7 +55,7 @@ Ric.update = function(){
             document.getElementById('ricardoDiv').classList.remove('hidden');
             document.getElementById('ricardoGifDance').setAttribute('src', Ric.baseURL_res + Menu.ricardoGifs[Math.floor(Math.random() * Menu.ricardoGifs.length)])
             document.getElementById('ricardoSpeechBubble').innerText = Menu.ricardoPhrases[Math.floor(Math.random() * Menu.ricardoPhrases.length)];
-            setTimeout(SOUND.CowBell.play(), 2000);
+            //setTimeout(SOUND.CowBell.play(), 2000);
         }
     }
     //RIc is not sleeping
