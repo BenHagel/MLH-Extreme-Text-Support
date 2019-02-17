@@ -9,9 +9,9 @@
     <!-- Include the Quill library -->
     <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
-    <script src ="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.min.js"></script>
 
-    
+
     <script type="text/javascript" src="./RicardoHelper.js"></script>
     <script type="text/javascript" src="./Menu.js"></script>
     <script src="./SoundHelper.js"></script>
@@ -118,6 +118,8 @@
 
     <!--Ricardo main pop location-->
     <div id="ricardoDiv" class="overlay-for-ricardo hidden">
+        <textarea id="ricardoSpeechBubble" rows="4" cols="40" readonly="true" style="resize:none; font-family:Arial; font-size:18; white-space:pre-wrap">
+        </textarea>
         <img src="res/Ricardo2.gif" width="200px" height="auto">
     </div>
 
@@ -148,9 +150,9 @@
         window.onbeforeunload = function () {
             return 'There are unsaved changes. Are you sure you want to leave?';
         }
-        
+
     </script>
-    
+
 
     <footer>
         (C) Affsoft 2019
