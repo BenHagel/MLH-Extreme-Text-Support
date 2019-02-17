@@ -26,9 +26,14 @@ Ric.createNewEntity = function(entityType, lifeForce){
     obj.container = document.createElement('div');
     if(entityType === 'ric'){
         obj.container.classList.add("ricardo-main-avatar");
-
+        obj.container.setAttribute('id', 'ricardoDiv');
+        var ricardoGif = document.createElement('img');
+        ricardoGif.setAttribute('src', Ric.baseURL_res + 'Ricardo2.gif');
+        obj.container.appendChild(ricardoGif);
     }
     obj.container.classList.add("hidden");
+    var x = document.getElementsByTagName("BODY")[0];
+    x.appendChild(obj.container);
     return obj;
 };
 
@@ -42,8 +47,8 @@ Ric.update = function(){
         Ric.sleep--;
         if(Ric.sleep < 1){
             Ric.sleeping = false;
-            //Ric.introSong1.play();
             SOUND.RicardoOne.play();
+            document.getElementById('ricardoDiv').classList.remove('hidden');
         }
     }
     //RIc is not sleeping
