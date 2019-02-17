@@ -38,7 +38,6 @@
         /* Set default font-family */
 
         #editor {
-            font-family: "Aref Ruqaa";
             font-size: 18px;
             height: calc(100vh - 200px);
             background: linear-gradient(135deg, #FFFFFF, #DDDDDD);
@@ -46,30 +45,6 @@
 
         #toolbar {
             background: linear-gradient(135deg, #FFFFFF, #DDDDDD);
-        }
-
-        /* Set dropdown font-families */
-
-        #toolbar .ql-font span[data-label="Aref Ruqaa"]::before {
-            font-family: "Aref Ruqaa";
-        }
-
-        #toolbar .ql-font span[data-label="Mirza"]::before {
-            font-family: "Mirza";
-        }
-
-        #toolbar .ql-font span[data-label="Roboto"]::before {
-            font-family: "Roboto";
-        }
-
-        /* Set content font-families */
-
-        .ql-font-mirza {
-            font-family: "Mirza";
-        }
-
-        .ql-font-roboto {
-            font-family: "Roboto";
         }
 
         #overlay {
@@ -111,11 +86,6 @@
                 <option value="32px">Huge</option>
             </select>
         </span>
-        <select class="ql-font">
-            <option selected>Aref Ruqaa</option>
-            <option value="mirza">Mirza</option>
-            <option value="roboto">Roboto</option>
-        </select>
         <button class="ql-image">Image</button>
         <button class="ql-code-block">Code Block</button>
 
@@ -149,14 +119,10 @@
 
     <!-- Initialize Quill editor -->
     <script>
-        // Add fonts to whitelist
-        var Font = Quill.import('formats/font');
-        Font.whitelist = ['mirza', 'roboto'];
         var BackgroundClass = Quill.import('attributors/class/background');
         var ColorClass = Quill.import('attributors/class/color');
         var SizeStyle = Quill.import('attributors/style/size');
         var Delta = Quill.import('delta');
-        Quill.register(Font, true);
         Quill.register(BackgroundClass, true);
         Quill.register(ColorClass, true);
         Quill.register(SizeStyle, true);
@@ -173,22 +139,6 @@
         // Check for unsaved data
         window.onbeforeunload = function () {
             return 'There are unsaved changes. Are you sure you want to leave?';
-        }
-
-        //var mySound = new sound("bounce.mp3");
-        function sound(src) {
-            this.sound = document.createElement("audio");
-            this.sound.src = src;
-            this.sound.setAttribute("preload", "auto");
-            this.sound.setAttribute("controls", "none");
-            this.sound.style.display = "none";
-            document.body.appendChild(this.sound);
-            /*this.play = function () {
-                this.sound.play();
-            }
-            this.stop = function () {
-                this.sound.pause();
-            }*/
         }
         
     </script>
