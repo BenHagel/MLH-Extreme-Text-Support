@@ -65,11 +65,9 @@ Menu.tickPhrases = function(){
 	}
 	//Switcher
 	if(Menu.hangTime < 1){
-		Menu.hangTime = 70;
+		Menu.hangTime = 100;
 		Menu.currentChar = 0;
 		Menu.phraseIndex = (Menu.phraseIndex + 1) % Menu.phrases.length;
-		
-		SOUND.RicardoVoice.play();
 	}
 	document.getElementById('ricardoSpeechBubble').innerHTML = '' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
 	setTimeout(Menu.tickPhrases, 80);
@@ -84,7 +82,7 @@ Menu.init = function(){
     Menu.phrases = Menu.ricardoPhrases;
 
     Menu.ticker();
-    Menu.tickPhrases();
+    
 };
 
 //Hide the intitial overlay and start Ricardo's awakeneing from his slumber
