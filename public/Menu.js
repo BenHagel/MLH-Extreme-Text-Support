@@ -107,8 +107,9 @@ Menu.hideSpeech = function(){
 };
 
 Menu.ricardoIntercept = function(){
-
-	//SOUND.CowBell.play();
+	document.getElementById('addedWordBox').classList.remove('hidden');
+	setTimeout(function() {document.getElementById('addedWordBox').classList.add('hidden');}, 1000);
+	SOUND.CowBell.play();
 };
 
 Menu.ticker = function(){
