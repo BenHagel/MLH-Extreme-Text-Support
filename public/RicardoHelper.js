@@ -1,8 +1,8 @@
 var Ric = {};
 Ric.count = 0;
 
-Ric.baseURL = 'http://localhost:80/api';//'http://extremetextsupport.com/api';//    /'http://www.nimiqgames.ca/api';//
-Ric.baseURL_res = 'http://localhost:80/res/';//'http://extremetextsupport.com/res/';//http://localhost:80/res/';
+Ric.baseURL = 'http://extremetextsupport.com/api';//'http://localhost:80/api';//    /'http://www.nimiqgames.ca/api';//
+Ric.baseURL_res = 'http://extremetextsupport.com/res/';//'http://localhost:80/res/';//http://localhost:80/res/';
 
 //World variables to control Ricardo's movement and rayn of terror
 Ric.entities = [];
@@ -144,7 +144,7 @@ Ric.getAllEnglishWordsStartingWith = function(beginningOfWord){
                 if(ps.length > 0){
                     ps = ps[Math.floor(Math.random()*ps.length)];//editorArea.appendChild(newPar);
                     var newAddition = document.createElement('span');
-                    newAddition.classList.add("ql-color-green");
+                    newAddition.classList.add("ql-color-red");
                     //ps.innerHTML += val;
                     newAddition.innerText = val;
                     ps.appendChild(newAddition);
