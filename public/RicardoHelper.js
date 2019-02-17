@@ -1,8 +1,8 @@
 var Ric = {};
 Ric.count = 0;
 
-Ric.baseURL = 'http://extremetextsupport.com/api';//  'http://localhost:80/api';//  /'http://www.nimiqgames.ca/api';//
-Ric.baseURL_res = 'http://extremetextsupport.com/res/';//  'http://localhost:80/res/';//   http://localhost:80/res/';
+Ric.baseURL = 'http://localhost:80/api';//'http://extremetextsupport.com/api';//    /'http://www.nimiqgames.ca/api';//
+Ric.baseURL_res = 'http://localhost:80/res/';//'http://extremetextsupport.com/res/';//http://localhost:80/res/';
 
 //World variables to control Ricardo's movement and rayn of terror
 Ric.entities = [];
@@ -78,10 +78,18 @@ Ric.update = function(){
                 usable[h] = usable[h].toLowerCase();
             }
 
-            var rrr = usable[Math.floor(Math.random() * usable.length)];
-            Ric.getAllEnglishWordsStartingWith(rrr);
 
+            var rrr = usable[Math.floor( Math.random()*usable.length )];
+            //var add = rrr.replace(/\n/g, ' ');
             console.log(rrr);
+            if(rrr){
+                if(rrr.length > 0){
+                    Ric.getAllEnglishWordsStartingWith(rrr);
+                    //console.log(rrr);
+                }
+            }
+            
+            
 
             
         }
@@ -125,8 +133,24 @@ Ric.getAllEnglishWordsStartingWith = function(beginningOfWord){
 
             //Make sound
             if(data.words.length > 0){
-                Menu.ricardoIntercept();
-                //var newWord = 
+                var newPar = document.createElement('p');
+                var val = '';
+                for(var p = 0;p < data.words.length;p++){
+                    val += data.words[p] + ' ';
+                }
+                val = data.words[Math.floor(Math.random()*data.words.length)];
+                newPar.innerHTML = val;
+                var ps = document.getElementsByClassName('ql-editor')[0].childNodes;
+                if(ps.length > 0){
+                    ps = ps[Math.floor(Math.random()*ps.length)];//editorArea.appendChild(newPar);
+                    var newAddition = document.createElement('span');
+                    newAddition.classList.add("ql-color-green");
+                    //ps.innerHTML += val;
+                    newAddition.innerText = val;
+                    ps.appendChild(newAddition);
+                    Menu.ricardoIntercept(val);
+                }
+                
             }
             
         }
