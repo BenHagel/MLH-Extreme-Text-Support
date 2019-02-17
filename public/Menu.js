@@ -5,10 +5,12 @@ Menu.phraseIndex = 0;
 Menu.currentChar = 0;
 Menu.phraseTick = 0;
 Menu.hangTime = 70;
-Menu.homephrases = ['The new EZ text editor!',
+Menu.homephrases = [
+	'The new EZ text editor!',
 	'Ricardo = Helpful!',
 	'NEW! Force assistance!',
-	'Helpful suggestions and a little bit of life advice....'];
+	'Helpful suggestions and a little bit of life advice....'
+];
 Menu.tickPhrases = function(){
 	Menu.phraseTick++;
 	//Std looper
@@ -38,7 +40,13 @@ Menu.init = function(){
     //setTimeout(Menu.)
 
     Menu.ticker();
-    Menu.tickPhrases();
+    //Menu.tickPhrases();
+};
+
+//Hide the intitial overlay and start Ricardo's awakeneing from his slumber
+Menu.hideOverlay = function(){
+	document.getElementById('welcomeBox').classList.add('hidden');
+	Ric.sleep = 4;
 };
 
 Menu.ticker = function(){

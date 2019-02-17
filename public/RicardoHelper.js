@@ -6,19 +6,17 @@ Ric.baseURL_res = 'http://localhost:80/res/';
 
 //World variables to control Ricardo's movement and rayn of terror
 Ric.entities = [];
-//Rico's sleep left
-Ric.sleep = 0;
-Ric.sleeping = true;
 
 //Initer function runs once on setup
 Ric.init = function(){
+    //Rico's sleep left
+    Ric.sleep = 84390123;
+    Ric.sleeping = true;
     Ric.count = 0;
     Ric.entities.push(
         Ric.createNewEntity('ric', 3000)
     );
-    Ric.sleep = 18; //-> has 16/2 seconds left to sleep
 };
-
 
 //Return new entity, and type
 Ric.createNewEntity = function(entityType, lifeForce){
@@ -26,6 +24,11 @@ Ric.createNewEntity = function(entityType, lifeForce){
     obj.type = entityType;
     obj.points = lifeForce;
     obj.container = document.createElement('div');
+    if(entityType === 'ric'){
+        obj.container.classList.add("ricardo-main-avatar");
+
+    }
+    obj.container.classList.add("hidden");
     return obj;
 };
 
@@ -39,8 +42,8 @@ Ric.update = function(){
         Ric.sleep--;
         if(Ric.sleep < 1){
             Ric.sleeping = false;
-            Ric.sleep = 16;
-            document.getElementById('RicardoIntro1').play();
+            //Ric.introSong1.play();
+            SOUND.RicardoOne.play();
         }
     }
     //RIc is not sleeping
@@ -54,8 +57,6 @@ Ric.update = function(){
             Ric.entities[j].update();
         }
     }
-
-    console.log('Rics Sleep: ' + Ric.sleep);
 };
 
 Ric.getRic = function(ents){
@@ -93,4 +94,5 @@ Ric.getAllEnglishWordsStartingWith = function(beginningOfWord){
     command += '&hits=50';
     Ric.xmlRequest('POST', command, possibleWords);
 };
+
 

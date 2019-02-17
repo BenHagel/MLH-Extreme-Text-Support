@@ -11,6 +11,18 @@ header{
     height: calc(102px);
 }
 
+.hidden{
+	transition: all 1s ease-in-out !important;
+	opacity:0;
+	max-height:0;
+	max-width:0;
+	display:none;
+	padding:0 !important;
+	margin:0 !important;
+	border:none !important;
+	overflow:hidden;
+}
+
 #speechBubble{
 
 }
@@ -41,6 +53,51 @@ header{
 
 	justify-content: center;
 	vertical-align: middle;
+}
+
+.overlay-box {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	color: white; background: #666666; opacity: .99;
+	z-index: 1000;
+	border-radius: 5px;
+
+	width: 80vw;
+	height: 80vh;
+}
+.tile-content {
+	text-align: center;
+
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	/*height: 100%;*/
+	color: rgb(253, 293, 18);
+}
+.x-area{
+	float: right;
+	vertical-align: top;
+}
+
+.ricardo-main-avatar{
+	width: 200px;
+	height: 200px;
+	border: 1px solid green;
+	position: absolute;
 }
 
 .ricardo-text-popup{
