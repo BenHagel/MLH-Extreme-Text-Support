@@ -53,6 +53,7 @@ Ric.update = function(){
             Ric.entities[0].ricardoGifContainer.setAttribute('src', Ric.baseURL_res + Menu.ricardoGifs[Math.floor(Math.random() * Menu.ricardoGifs.length)]);
             Ric.entities[0].container.appendChild(Ric.entities[0].ricardoGifContainer);
             document.getElementById('ricardoSpeechBubble').innerText = Menu.ricardoPhrases[Math.floor(Math.random() * Menu.ricardoPhrases.length)];
+            setTimeout(SOUND.CowBell.play(), 2000);
         }
     }
     //RIc is not sleeping
@@ -60,7 +61,7 @@ Ric.update = function(){
         //10% chance Ricardo looks for new words
         if(Math.random() < 0.1){
             var g = document.getElementsByClassName('ql-editor')[0].childNodes;
-            console.log(g.length + ' elements');
+            //console.log(g.length + ' elements');
 
             Menu.ricardoIntercept();
         }

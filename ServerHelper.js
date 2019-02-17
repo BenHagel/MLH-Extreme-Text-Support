@@ -19,10 +19,10 @@ Ricardo.handleApi = function(req, res){
             }
             if(results.words.length > hits) break;
         }
-        //res.json()
+        res.json(results);
     }
     else{
-        //res.json
+        res.json({"Error":"erroro"});
     }
 };
 

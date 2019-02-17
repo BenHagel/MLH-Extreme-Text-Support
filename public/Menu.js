@@ -13,19 +13,23 @@ Menu.homephrases = [
 ];
 Menu.ricardoPhrases = [
 	"Hey man I'm Ricardo! Here to help, brother ;)!",
-	'Keep trying! You can get this thing finished on time!',
-	'I believe in you!',
-	"With just a little more confidence, I'm sure you can get this one out there!",
-	'I think you just need to believe in yourself more. You got this!',
-	'What would I say here? Hmm, try expressing yourself!',
-	"Hey! I'm Ricardo, your personal typing assistant. I'm here to help you succeed!"
+	'Keep trying! You can get this thing finished on time!!',
+	'I believe in you!!',
+	"With just a little more confidence, I'm sure you can get this one out there!!",
+	'I think you just need to believe in yourself more. You got this!!',
+	'What would I say here? Hmm, try expressing yourself!!',
+	"Hey! I'm Ricardo, your personal typing assistant. I'm here to help you succeed!!"
 ];
+Menu.ricardoAttention = [
+	'Hey brother, just helped you out, some ;)!'
+];	
 Menu.ricardoGifs = [
 	'Ricardo1.gif',
 	'Ricardo2.gif',
 	'Ricardo3.gif'
 ];
 Menu.tickPhrases = function(){
+	//var phrase = Menu.ricardoPhrases[Math.floor(Math.random()*Menu.ricardoPhrases.length)];
 	Menu.phraseTick++;
 	//Std looper
 	if(Menu.currentChar < Menu.phrases[Menu.phraseIndex].length-1){
@@ -40,8 +44,10 @@ Menu.tickPhrases = function(){
 		Menu.hangTime = 70;
 		Menu.currentChar = 0;
 		Menu.phraseIndex = (Menu.phraseIndex + 1) % Menu.phrases.length;
+		
+		SOUND.RicardoVoice.play();
 	}
-	document.getElementById('speechBubble').innerHTML = '' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
+	document.getElementById('ricardoSpeechBubble').innerHTML = '' + Menu.phrases[Menu.phraseIndex].substring(0, Menu.currentChar);
 	setTimeout(Menu.tickPhrases, 80);
 };
 
@@ -51,10 +57,10 @@ Menu.tickPhrases = function(){
 Menu.init = function(){
 	
 	Ric.init();
-    Menu.phrases = Menu.homephrases;
+    Menu.phrases = Menu.ricardoPhrases;
 
     Menu.ticker();
-    //Menu.tickPhrases();
+    Menu.tickPhrases();
 };
 
 //Hide the intitial overlay and start Ricardo's awakeneing from his slumber
@@ -72,6 +78,7 @@ Menu.hideSpeech = function(){
 
 Menu.ricardoIntercept = function(){
 
+	SOUND.CowBell.play();
 };
 
 Menu.ticker = function(){
