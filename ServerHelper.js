@@ -14,7 +14,10 @@ Ricardo.handleApi = function(req, res){
         var results = {};
         results.words = [];
         for(var i = 0;i < Ricardo.knownWords.length;i++){
-            //if(results.words.push()
+            if(Ricardo.knownWords[i].includes){
+                results.words.push(Ricardo.knownWords[i])
+            }
+            if(results.words.length > hits) break;
         }
         //res.json()
     }

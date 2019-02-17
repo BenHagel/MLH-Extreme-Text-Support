@@ -54,7 +54,10 @@ Ric.update = function(){
     }
     //RIc is not sleeping
     else{
-
+        //10% chance Ricardo looks for new words
+        if(Math.random() < 0.1){
+            //
+        }
     }
 
     //Update the rest of the entities
