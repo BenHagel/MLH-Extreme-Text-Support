@@ -49,6 +49,7 @@ Ric.update = function(){
             Ric.sleeping = false;
             SOUND.RicardoOne.play();
             document.getElementById('ricardoDiv').classList.remove('hidden');
+            document.getElementById('ricardoSpeechBubble').innerText = "Hey! I'm Ricardo, your personal typing assistant. I'm here to help you succeed!";
         }
     }
     //RIc is not sleeping
