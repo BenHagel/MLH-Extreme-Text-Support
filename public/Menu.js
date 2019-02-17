@@ -18,12 +18,36 @@ Menu.ricardoPhrases = [
 	"With just a little more confidence, I'm sure you can get this one out there!",
 	'I think you just need to believe in yourself more. You got this!',
 	'What would I say here? Hmm, try expressing yourself!',
-	"Hey! I'm Ricardo, your personal typing assistant. I'm here to help you succeed!"
+	"Hey! I'm Ricardo, your personal typing assistant. I'm here to help you succeed!",
+	"Hey, I was just thinking about you. I hope you're doing okay! ;)",
+	"Try giving yourself more compliments, you're worth it!",
+	"How's your work coming along? Remember to take breaks!",
+	"I hope you can finish this on time. Remember, I believe in you!",
+	"Once this is done, maybe you and I can dance a while? ;)",
+	"RICARDOOOO",
+	"You're really great at writing, I'm amazed!",
+	"Try writing from your heart!",
+	"There's a vast ocean of possibilities out there. Our meeting was fate!",
+	"Do you like computers? Yeah, I've never owned one, but they look alright!",
+	"Hmm, that's not what I would have done, but I support you.",
+	"How often do you visit the gym? I'm on that grind all the time!",
+	"Where do you workout? I can give you some pointers on your exercise routine!",
+	"Can I help you?",
+	"Hey, can I ask you a question? Did it hurt? When you fell from heaven?",
+	"Haha yeah I'll just be down here!",
+	"Do you have the time? I lost my phone and can't check!",
+	"You can do it!",
+	"Fight harder! You're almost there!"
 ];
 Menu.ricardoGifs = [
 	'Ricardo1.gif',
 	'Ricardo2.gif',
-	'Ricardo3.gif'
+	'Ricardo3.gif',
+	'Ricardo4.gif',
+	'Ricardo5.gif',
+	'Ricardo6.gif',
+	'Ricardo7.gif',
+	'Ricardo8.gif'
 ];
 Menu.tickPhrases = function(){
 	Menu.phraseTick++;
