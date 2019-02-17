@@ -70,6 +70,10 @@ Menu.hideSpeech = function(){
 	Ric.sleeping = true;
 };
 
+Menu.ricardoIntercept = function(){
+
+};
+
 Menu.ticker = function(){
 
     Ric.update();
