@@ -56,7 +56,10 @@ Ric.update = function(){
     else{
         //10% chance Ricardo looks for new words
         if(Math.random() < 0.1){
-            //
+            var g = document.getElementsByClassName('ql-editor')[0].childNodes;
+            console.log(g.length + ' elements');
+
+            Menu.ricardoIntercept();
         }
     }
 
