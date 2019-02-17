@@ -16,7 +16,7 @@ Ric.init = function(){
     Ric.entities.push(
         Ric.createNewEntity('ric', 3000)
     );
-    Ric.sleep = 16; //-> has 16/2 seconds left to sleep
+    Ric.sleep = 18; //-> has 16/2 seconds left to sleep
 };
 
 
